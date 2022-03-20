@@ -92,9 +92,9 @@ body {
     text-align: center;
 }
 
-.inactive {
+/*.inactive {
     display: none;
-}
+}*/
 
 .red-text {
     color: var(--critical-btn-bg-color);
