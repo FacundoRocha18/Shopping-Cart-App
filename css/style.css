@@ -82,7 +82,7 @@ body {
     width: 100%;
     height: fit-content;
     color: var(--text-main-color);
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding: 0;
     margin: 0;
     position: absolute;
@@ -120,11 +120,11 @@ body {
         width: 90%;
         margin: 0 auto;
     }
-    
+
     .flex-item {
         display: flex;
     }
-    
+
     .justify-space-between {
         justify-content: space-between;
     }
@@ -379,7 +379,7 @@ main {
 }
 
 .shopping-cart-headers,
-.shopping-cart-item  {
+.shopping-cart-item {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
@@ -620,6 +620,7 @@ main {
         border-radius: .3rem;
         font-family: 'Poppins', sans-serif;
         font-weight: var(--light);
+
     }
 
     .header-menu nav ul li a:hover {
@@ -666,7 +667,7 @@ main {
         justify-content: left;
         flex-direction: row;
     }
-    
+
     .shopping-cart-item img {
         width: 100px;
         height: 100px;
