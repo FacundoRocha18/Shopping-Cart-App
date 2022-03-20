@@ -10,106 +10,261 @@
     <link rel="stylesheet" href="/src/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Questrial&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Questrial&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
 
 </head>
 
 <body>
     <header class="website-header">
-        <div class="header-logo">
-            <a href="#"><h1 class="website-logo title-center">Shopping Cart</h1></a>
-        </div>
-        <div class="header-menu">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li class="show-cart-btn"><span class="material-icons">shopping_cart</span></li>
-                </ul>
-            </nav>
+        <div class="center-object flex-item justify-space-between">
+            <div class="header-logo">
+                <a href="#">
+                    <h1 class="website-logo title-center"><span>Hard</span>Store</h1>
+                </a>
+            </div>
+            <div class="header-menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li class="btn s-btn show-cart"><span class="material-icons-outlined">shopping_cart</span></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
     <main class="main-content-container">
-        <div class="products-container">
-            <div class="products-grid">
-                <div class="products-item" id="item">
-                    <div class="product-title">
-                        <h3 class="title-center">AMD Ryzen 9 5950x</h3>
-                    </div>
-                    <div class="product-body">
-                        <div class="product-image">
-                            <img src="/src/img/r9_5950x.png" alt="Procesador AMD R9 5950X">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-price">
-                                <p><span>USD 1.345,00</span> iva inc.</p>
+        <div class="main-content-wrapper">
+            <section class="store-container">
+                <div class="products-container">
+                    <div class="products-grid">
+                        <div class="products-item" id="item">
+                            <div class="product-item-title">
+                                <h2 class="title-center" id="item-title">AMD Ryzen 9 5950x</h2>
                             </div>
-                            <div class="btn-container">
-                                <div class="add-item-btn">Add <span class="material-icons">add_shopping_cart</span></div>
+                            <div class="product-body">
+                                <div class="product-image">
+                                    <img src="/src/img/r9_5950x.png" alt="Procesador AMD R9 5950X" id="item-image">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-price">
+                                        <p>USD<span id="item-price"> 1.345,00</span> iva inc.</p>
+                                    </div>
+                                    <div class="btn-container">
+                                        <div class="btn p-btn add-item">
+                                            <p>Agregar </p><span class="material-icons">add_shopping_cart</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-item" id="item">
+                            <div class="product-item-title">
+                                <h2 class="title-center" id="item-title">Asus RTX 3080Ti</h2>
+                            </div>
+                            <div class="product-body">
+                                <div class="product-image">
+                                    <img src="/src/img/rtx3080.png" alt="ASUS RTX3080 graphics card" id="item-image">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-price">
+                                        <p>USD<span id="item-price"> 3.287,00</span> iva inc.</p>
+                                    </div>
+                                    <div class="btn-container">
+                                        <div class="btn p-btn add-item">
+                                            <p>Agregar </p><span class="material-icons">add_shopping_cart</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-item" id="item">
+                            <div class="product-item-title">
+                                <h2 class="title-center" id="item-title">Asus ROG CROSSHAIR VIII EXTREME</h2>
+                            </div>
+                            <div class="product-body">
+                                <div class="product-image">
+                                    <img src="/src/img/h525.png" alt="ASUS ROG CROSSHAIR VIII EXTREME Motherboard" id="item-image">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-price">
+                                        <p>USD<span id="item-price"> 806.77</span> iva inc.</p>
+                                    </div>
+                                    <div class="btn-container">
+                                        <div class="btn p-btn add-item">
+                                            <p>Agregar </p><span class="material-icons">add_shopping_cart</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-item" id="item">
+                            <div class="product-item-title">
+                                <h2 class="title-center" id="item-title">Asus ROG Strix Helios</h2>
+                            </div>
+                            <div class="product-body">
+                                <div class="product-image">
+                                    <img src="/src/img/helios.png" alt="ASUS ROG Strix Helios Case" id="item-image">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-price">
+                                        <p>USD<span id="item-price"> 299.99</span> iva inc.</p>
+                                    </div>
+                                    <div class="btn-container">
+                                        <div class="btn p-btn add-item addToCart">
+                                            <p>Agregar </p><span class="material-icons">add_shopping_cart</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="products-item" id="item">
-                    <div class="product-title">
-                        <h3 class="title-center">Asus RTX 3080Ti</h3>
-                    </div>
-                    <div class="product-body">
-                        <div class="product-image">
-                            <img src="/src/img/rtx3080.png" alt="ASUS RTX3080 graphics card">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-price">
-                                <p><span>USD 3.287,00</span> iva inc.</p>
+            </section>
+            <section class="shopping-cart">
+                <div class="shopping-cart-container">
+                    <h1 class="title-center">Carrito</h1>
+                    <div class="shopping-cart-headers">
+                        <div class="column">
+                            <div class="shopping-cart-header">
+                                <h4>Producto:</h4>
                             </div>
-                            <div class="btn-container">
-                                <div class="add-item-btn">Add <span class="material-icons">add_shopping_cart</span></div>
+                            
+                        </div>
+                        <div class="column">
+                            <div class="shopping-cart-header">
+                                <h4 class="text-truncate">Precio:</h4>
+                            </div>
+                            
+                        </div>
+                        <div class="column">
+                            <div class="shopping-cart-header">
+                                <h4>Cantidad:</h4>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Shopping cart item example -->
+                    <div class="item-rows-container">
+                        <!-- <div class="row shopping-cart-item">
+                            <div class="column">
+                                <div class="shopping-cart-info">
+                                    <img src='/src/img/r9_5950x.png' class="shopping-cart-image">
+                                    <h5 class="shopping-cart-item-title shoppingCartItemTitle title-center">AMD Ryzen 9 5950x</h5>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="shopping-cart-price">
+                                    <p class="shoppingCartItemPrice">USD <span class="item-price">0.00</span></p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="shopping-cart-quantity">
+                                    <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
+                                        value="1">
+                                    <button class="btn btn-danger buttonDelete" type="button">X</button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="shopping-cart-total-container">
+                        <div class="shopping-cart-total">
+                            <p>Total: USD<span class="shoppingCartTotal" id="cart-total-price"> 0.00</span></p>
+                            <button class="btn btn-success comprarButton" type="button" data-toggle="modal"
+                                data-target="#comprarModal">Comprar</button>
+                        </div>
+                    </div>
+                    <!-- END TOTAL -->
+                    <!-- Alerts -->
+                    <div class="alerts-container">
+                        <!-- Item added alert -->
+                        <div class="alert-popup success-alert inactive" id="add-success-alert" role="alert"
+                            data-delay="2000">
+                            <div class="alert-header">
+                                <h4>Elemento en el carrito</h4>
+                                <button type="button" class="close-btn" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert-body">
+                                <p>Se aumentó correctamente la cantidad</p>
+                            </div>
+                        </div>
+                        <!-- Item added error alert -->
+                        <div class="alert-popup error-alert inactive" id="add-success-alert" role="alert"
+                            data-delay="2000">
+                            <div class="alert-header">
+                                <h4>Ocurrió un error al agregar el producto</h4>
+                                <button type="button" class="close-btn" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert-body">
+                                <p>Ocurrió un error al agregar el producto al carrito, por favor intente nuevamente más
+                                    tarde. Si el problema persiste contacte con nosotros.</p>
+                            </div>
+                        </div>
+                        <!-- Products buy alert -->
+                        <div class="alert-popup success-alert inactive" id="sell-success-alert" role="alert"
+                            data-delay="2000">
+                            <div class="alert-header">
+                                <h4>Gracias por su compra</h4>
+                                <button type="button" class="close-btn" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert-body">
+                                <p>Pronto recibirá su pedido</p>
+                            </div>
+                        </div>
+                        <!-- Products buy error -->
+                        <div class="alert-popup error-alert inactive" id="sell-error-alert" role="alert"
+                            data-delay="2000">
+                            <div class="alert-header">
+                                <h4>Ocurrió un error al procesar su compra</h4>
+                                <button type="button" class="close-btn" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert-body">
+                                <p>Ocurrió un error al procesar su compra, por favor intente nuevamente más tarde. Si el
+                                    problema persiste contacte con nosotros.</p>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                <div class="products-item" id="item">
-                    <div class="product-title">
-                        <h3 class="title-center">Asus ROG CROSSHAIR VIII EXTREME</h3>
-                    </div>
-                    <div class="product-body">
-                        <div class="product-image">
-                            <img src="/src/img/h525.png" alt="ASUS ROG CROSSHAIR VIII EXTREME Motherboard">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-price">
-                                <p><span>USD 806.77</span> iva inc.</p>
-                            </div>
-                            <div class="btn-container">
-                                <div class="add-item-btn">Add <span class="material-icons">add_shopping_cart</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="products-item" id="item">
-                    <div class="product-title">
-                        <h3 class="title-center">Asus ROG Strix Helios</h3>
-                    </div>
-                    <div class="product-body">
-                        <div class="product-image">
-                            <img src="/src/img/helios.png" alt="ASUS ROG Strix Helios Case">
-                        </div>
-                        <div class="product-info">
-                            <div class="product-price">
-                                <p><span>USD 299.99</span> iva inc.</p>
-                            </div>
-                            <div class="btn-container">
-                                <div class="add-item-btn">Add <span class="material-icons">add_shopping_cart</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            </section>
         </div>
     </main>
+    <footer class="website-footer">
+        <div class="center-object flex-item justify-space-between">
+            <div class="footer-logo">
+                <a href="#">
+                    <h1 class="website-logo title-center"><span>Hard</span>Store</h1>
+                </a>
+            </div>
+            <div class="footer-menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>   
+    </footer>
+    <script type="module" src="/src/js/app.js"></script>
 </body>
 
 </html>
