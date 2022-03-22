@@ -96,6 +96,10 @@ body {
     display: block;
 }
 
+/*.inactive {
+    display: none;
+}*/
+
 .red-text {
     color: var(--critical-btn-bg-color);
     font-size: 2.2rem;
