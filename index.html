@@ -179,42 +179,62 @@
                     <div class="shopping-cart-total-container">
                         <div class="shopping-cart-total">
                             <p>Total: USD <span class="shoppingCartTotal" id="cart-total-price"> 0.00</span></p>
-                            <!-- Alerts -->
-                            <div class="alerts-container">
-                                <!-- Item added alert example-->
-                                <div class="alert-popup success-alert" id="add-success-alert" role="alert"
-                                    data-delay="2000">
-                                    <div class="alert-header">
-                                        <h4>Elemento en el carrito</h4>
-                                        <button type="button" class="close-btn" aria-label="Close">
-                                            <p>Cerrar </p><span class="material-icons-outlined">close</span>
-                                        </button>
-                                    </div>
-                                    <div class="alert-body">
-                                        <p>Se aumentó correctamente la cantidad.</p>
-                                    </div>
-                                </div>
-                                <!-- Item added error alert example-->
-                                <div class="alert-popup error-alert" id="add-success-alert" role="alert"
-                                    data-delay="2000">
-                                    <div class="alert-header">
-                                        <h4>Ocurrió un error al agregar el producto</h4>
-                                        <button type="button" class="close-btn" aria-label="Close">
-                                            <p>Cerrar </p><span class="material-icons-outlined">close</span>
-                                        </button>
-                                    </div>
-                                    <div class="alert-body">
-                                        <p>Por favor intente nuevamente más tarde. Si el problema persiste contacte con
-                                            nosotros.</p>
-                                    </div>
-                                </div>
-                            </div>
+
                             <button class="btn btn-success comprarButton" type="button" data-toggle="modal"
                                 data-target="#buy-success-alert">Comprar</button>
                         </div>
                     </div>
                     <!-- END TOTAL -->
-
+                    <!-- Modal -->
+                    <div class="modal-item-container modal-inactive">
+                        <div class="modal-item">
+                            <div class="modal-header">
+                                <div class="modal-header-title">
+                                    <h4>Compra realizada con éxito.</h4>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-body-text">
+                                    <p>Pronto recibirá su pedido.</p>
+                                </div>
+                                <div class="modal-body-button">
+                                    <div class="btn close-modal-btn">
+                                        <p>Cerrar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alerts -->
+                    <div class="alerts-container">
+                        <!-- Item added alert example-->
+                        <div class="alert-popup success-alert alert-inactive" id="add-success-alert" role="alert"
+                            data-delay="2000">
+                            <div class="alert-header">
+                                <h4>Elemento en el carrito</h4>
+                                <button type="button" class="close-btn" aria-label="Close">
+                                    <p>Cerrar </p><span class="material-icons-outlined">close</span>
+                                </button>
+                            </div>
+                            <div class="alert-body">
+                                <p>Se aumentó correctamente la cantidad.</p>
+                            </div>
+                        </div>
+                        <!-- Item added error alert example-->
+                        <div class="alert-popup error-alert alert-inactive" id="add-success-alert" role="alert"
+                            data-delay="2000">
+                            <div class="alert-header">
+                                <h4>Ocurrió un error al agregar el producto</h4>
+                                <button type="button" class="close-btn" aria-label="Close">
+                                    <p>Cerrar </p><span class="material-icons-outlined">close</span>
+                                </button>
+                            </div>
+                            <div class="alert-body">
+                                <p>Por favor intente nuevamente más tarde. Si el problema persiste contacte con
+                                    nosotros.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </section>
