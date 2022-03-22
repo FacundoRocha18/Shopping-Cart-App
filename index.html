@@ -91,7 +91,8 @@
                             </div>
                             <div class="product-body">
                                 <div class="product-image">
-                                    <img src="img/h525.png" alt="ASUS ROG CROSSHAIR VIII EXTREME Motherboard" id="item-image">
+                                    <img src="img/h525.png" alt="ASUS ROG CROSSHAIR VIII EXTREME Motherboard"
+                                        id="item-image">
                                 </div>
                                 <div class="product-info">
                                     <div class="product-price">
@@ -136,19 +137,19 @@
                             <div class="shopping-cart-header">
                                 <h4>Producto:</h4>
                             </div>
-                            
+
                         </div>
                         <div class="column">
                             <div class="shopping-cart-header">
                                 <h4 class="text-truncate">Precio:</h4>
                             </div>
-                            
+
                         </div>
                         <div class="column">
                             <div class="shopping-cart-header">
                                 <h4>Cantidad:</h4>
                             </div>
-                            
+
                         </div>
                     </div>
                     <!-- Shopping cart item example -->
@@ -166,7 +167,7 @@
                                 </div>
                             </div>
                             <div class="column">
-                                <div class="shopping-cart-quantity">
+                                <div class="shopping-cart-quantity-container">
                                     <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
                                         value="1">
                                     <button class="btn btn-danger buttonDelete" type="button">X</button>
@@ -177,69 +178,42 @@
 
                     <div class="shopping-cart-total-container">
                         <div class="shopping-cart-total">
-                            <p>Total: USD<span class="shoppingCartTotal" id="cart-total-price"> 0.00</span></p>
+                            <p>Total: USD <span class="shoppingCartTotal" id="cart-total-price"> 0.00</span></p>
+                            <!-- Alerts -->
+                            <div class="alerts-container">
+                                <!-- Item added alert example-->
+                                <div class="alert-popup success-alert" id="add-success-alert" role="alert"
+                                    data-delay="2000">
+                                    <div class="alert-header">
+                                        <h4>Elemento en el carrito</h4>
+                                        <button type="button" class="close-btn" aria-label="Close">
+                                            <p>Cerrar </p><span class="material-icons-outlined">close</span>
+                                        </button>
+                                    </div>
+                                    <div class="alert-body">
+                                        <p>Se aumentó correctamente la cantidad.</p>
+                                    </div>
+                                </div>
+                                <!-- Item added error alert example-->
+                                <div class="alert-popup error-alert" id="add-success-alert" role="alert"
+                                    data-delay="2000">
+                                    <div class="alert-header">
+                                        <h4>Ocurrió un error al agregar el producto</h4>
+                                        <button type="button" class="close-btn" aria-label="Close">
+                                            <p>Cerrar </p><span class="material-icons-outlined">close</span>
+                                        </button>
+                                    </div>
+                                    <div class="alert-body">
+                                        <p>Por favor intente nuevamente más tarde. Si el problema persiste contacte con
+                                            nosotros.</p>
+                                    </div>
+                                </div>
+                            </div>
                             <button class="btn btn-success comprarButton" type="button" data-toggle="modal"
-                                data-target="#comprarModal">Comprar</button>
+                                data-target="#buy-success-alert">Comprar</button>
                         </div>
                     </div>
                     <!-- END TOTAL -->
-                    <!-- Alerts -->
-                    <div class="alerts-container">
-                        <!-- Item added alert -->
-                        <div class="alert-popup success-alert inactive" id="add-success-alert" role="alert"
-                            data-delay="2000">
-                            <div class="alert-header">
-                                <h4>Elemento en el carrito</h4>
-                                <button type="button" class="close-btn" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert-body">
-                                <p>Se aumentó correctamente la cantidad</p>
-                            </div>
-                        </div>
-                        <!-- Item added error alert -->
-                        <div class="alert-popup error-alert inactive" id="add-success-alert" role="alert"
-                            data-delay="2000">
-                            <div class="alert-header">
-                                <h4>Ocurrió un error al agregar el producto</h4>
-                                <button type="button" class="close-btn" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert-body">
-                                <p>Ocurrió un error al agregar el producto al carrito, por favor intente nuevamente más
-                                    tarde. Si el problema persiste contacte con nosotros.</p>
-                            </div>
-                        </div>
-                        <!-- Products buy alert -->
-                        <div class="alert-popup success-alert inactive" id="sell-success-alert" role="alert"
-                            data-delay="2000">
-                            <div class="alert-header">
-                                <h4>Gracias por su compra</h4>
-                                <button type="button" class="close-btn" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert-body">
-                                <p>Pronto recibirá su pedido</p>
-                            </div>
-                        </div>
-                        <!-- Products buy error -->
-                        <div class="alert-popup error-alert inactive" id="sell-error-alert" role="alert"
-                            data-delay="2000">
-                            <div class="alert-header">
-                                <h4>Ocurrió un error al procesar su compra</h4>
-                                <button type="button" class="close-btn" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert-body">
-                                <p>Ocurrió un error al procesar su compra, por favor intente nuevamente más tarde. Si el
-                                    problema persiste contacte con nosotros.</p>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 
@@ -262,7 +236,7 @@
                     </ul>
                 </nav>
             </div>
-        </div>   
+        </div>
     </footer>
     <script type="module" src="js/app.js"></script>
 </body>

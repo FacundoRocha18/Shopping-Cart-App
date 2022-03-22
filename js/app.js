@@ -5,6 +5,10 @@ addToShoppingCartButtons.forEach((addToCartButton) => {
 
 const shoppingCartItemsContainer = document.querySelector('.item-rows-container');
 
+const successAlert = document.querySelector('.success-alert');
+const errorAlert = document.querySelector('.error-alert');
+
+
 function addToCartClicked(event) {
 
     const button = event.target;
@@ -18,6 +22,29 @@ function addToCartClicked(event) {
 }
 
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
+
+    const shoppingCartRowElement = shoppingCartItemsContainer.querySelector('.shopping-cart-item');
+    console.log(shoppingCartRowElement);
+    const elementTitle = shoppingCartRowElement.getElementsByClassName('.shopping-cart-item-title');
+    console.log(elementTitle);
+
+    for ( let i = 0; i < elementTitle.length; i++ ) {
+
+        alert('hola');
+        if ( elementTitle[i] === itemTitle ) {
+            let elementsQuantity = elementTitle[i].closest('.shopping-cart-item').querySelector('.shoppingCartItemQuantity');
+
+            console.log(elementsQuantity);
+            elementsQuantity.value++;
+            successAlert.classList.add('active');
+            updateShoppingCartTotal();
+            return;
+        }
+    }
+
+
+
+
     const shoppingCartRow = document.createElement('div');
     const shoppingCartContent = `
                         <div class="row shopping-cart-item">
@@ -33,15 +60,30 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
                                 </div>
                             </div>
                             <div class="column">
-                                <div class="shopping-cart-quantity">
-                                    <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
+                                <div class="shopping-cart-quantity-container">
+                                    <div class='shopping-cart-quantity'>
+                                        <div class='quantity-down-btn'><span>-</span></div>
+                                        <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
                                         value="1">
-                                    <button class="btn btn-danger buttonDelete" type="button">X</button>
+                                        <div class='quantity-up-btn'><span>+</span></div>
+                                    </div>
+                                    <div class='remove-cart-item-button-container'>
+                                        <button class="btn btn-danger remove-item-btn" type="button"><span class="material-icons-outlined">close</span></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>`;
     shoppingCartRow.innerHTML = shoppingCartContent;
     shoppingCartItemsContainer.append(shoppingCartRow);
+
+    shoppingCartRow.querySelector('.remove-item-btn').addEventListener('click', deleteShoppingCartItem);
+
+    shoppingCartRow.querySelector('.shoppingCartItemQuantity').addEventListener('change', quantityChanged);
+
+    shoppingCartRow.querySelector('.quantity-down-btn').addEventListener('click', changeQuantityDown);
+
+    shoppingCartRow.querySelector('.quantity-up-btn').addEventListener('click', changeQuantityUp);
+
 
     updateShoppingCartTotal();
 }
@@ -64,11 +106,47 @@ function updateShoppingCartTotal() {
 
 
         total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
-        console.log(shoppingCartItemPrice);
-        console.log(shoppingCartItemQuantity);
     });
     
-    console.log(total);
     shoppingCartTotal.innerHTML = `${total.toFixed(2)}`;
     
+}
+
+function deleteShoppingCartItem(event) {
+    const buttonClicked = event.target;
+    buttonClicked.closest('.shopping-cart-item').remove();
+    updateShoppingCartTotal();
+}
+
+function changeQuantityUp(event) {
+    const buttonUpClicked = event.target;
+    const inputWrapper = buttonUpClicked.closest('.shopping-cart-quantity');
+    const input = inputWrapper.querySelector('.shoppingCartItemQuantity');
+    
+    if ( input.value == 99 ) {
+        input.value = 99;
+    } else {
+        return quantityChanged(input.value++);
+    }
+
+}
+
+function changeQuantityDown(event) {
+    const buttonUpClicked = event.target;
+    const inputWrapper = buttonUpClicked.closest('.shopping-cart-quantity');
+    const input = inputWrapper.querySelector('.shoppingCartItemQuantity');
+    
+    if ( input.value == 1 ) {
+        input.value = 1;
+    } else {
+        return quantityChanged(input.value--);
+    }
+
+}
+
+function quantityChanged(input) {
+    
+  
+    input.value <= 0 ? (input.value = 1) : null;
+    updateShoppingCartTotal();
 }
